@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Int Cronus BC14 Academy",
+            "server": "http://navdev.smartcloud.com.ua",
+            "port": 7049,
+            "serverInstance": "CronusBC14TrainingDEV",
+            "authentication": "Windows",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "schemaUpdateMode": "ForceSync"
+        }
+    ]
+}

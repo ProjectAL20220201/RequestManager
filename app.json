@@ -1,0 +1,28 @@
+{
+  "id": "56f1773d-d887-4705-bfae-cdc5f5ebf803",
+  "name": "RequestManager",
+  "publisher": "BOSTE",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 52220,
+      "to": 52299
+    }
+  ],
+  "showMyCode": true,
+  "runtime": "3.0",
+  "features": [
+    "TranslationFile"
+  ]
+}

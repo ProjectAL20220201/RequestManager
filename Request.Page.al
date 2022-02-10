@@ -16,6 +16,15 @@ page 52222 "Request"
                 {
                     ToolTip = 'Specifies the value of the No. field.';
                     ApplicationArea = All;
+                    trigger OnAssistEdit()
+                    var
+                        NoSeriesManagement: Codeunit NoSeriesManagement;
+                        RequestSetup: Record RequestSetup;
+                    begin
+                        RequestSetup.Get();
+                        if NoSeriesManagement.SelectSeries(RequestSetup.DefaultSerialNo, '', Rec."No.") then
+                            NoSeriesManagement.SetSeries(Rec."No.");
+                    end;
                 }
                 field("User ID"; Rec."User ID")
                 {

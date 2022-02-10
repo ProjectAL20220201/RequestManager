@@ -72,6 +72,13 @@ table 52222 Request
             CalcFormula = lookup(Repairman.Name where(Code = field("Repairman Code")));
             Editable = false;
         }
+        field(73; "Repairman Email"; Text[80])
+        {
+            Caption = 'Repairman Email';
+            FieldClass = FlowField;
+            CalcFormula = lookup(Repairman."E-mail" where(Code = field("Repairman Code")));
+            Editable = false;
+        }
         field(80; "Customer No."; Code[20])
         {
             Caption = 'Customer No.';

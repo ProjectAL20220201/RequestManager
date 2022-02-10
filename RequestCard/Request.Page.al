@@ -21,9 +21,11 @@ page 52222 "Request"
                         NoSeriesManagement: Codeunit NoSeriesManagement;
                         RequestSetup: Record RequestSetup;
                     begin
-                        RequestSetup.Get();
-                        if NoSeriesManagement.SelectSeries(RequestSetup.DefaultSerialNo, '', Rec."No.") then
-                            NoSeriesManagement.SetSeries(Rec."No.");
+                        if Status = Status::Created then begin
+                            RequestSetup.Get();
+                            if NoSeriesManagement.SelectSeries(RequestSetup.DefaultSerialNo, '', Rec."No.") then
+                                NoSeriesManagement.SetSeries(Rec."No.");
+                        end;
                     end;
                 }
                 field("User ID"; Rec."User ID")

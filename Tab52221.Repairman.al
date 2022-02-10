@@ -8,7 +8,7 @@ table 52221 Repairman
         field(10; "Code"; Code[20])
         {
             Caption = 'Code';
-            DataClassification = EndUserIdentifiableInformation;
+            DataClassification = CustomerContent;
         }
         field(20; Name; Text[50])
         {

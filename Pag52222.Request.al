@@ -159,6 +159,14 @@ page 52222 "Request "
         }
 
     }
+    trigger OnOpenPage()
+    begin
+        if Status = Status::Created then begin
+            RepFieldEditalbe := true;
+            RepairmanCommentEditable := true;
+        end;
+    end;
+
     trigger OnAfterGetRecord()
     begin
         SetEditable();

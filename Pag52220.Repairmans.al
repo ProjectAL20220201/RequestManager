@@ -41,4 +41,22 @@ page 52220 Repairmans
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            action("Request Report")
+            {
+                ApplicationArea = All;
+                Image = Report;
+                Promoted = true;
+                PromotedCategory = Process;
+                trigger OnAction()
+                begin
+                    CurrPage.SetSelectionFilter(Rec);
+                    Report.Run(Report::"Requests Report", FALSE, TRUE, Rec);
+                end;
+            }
+        }
+    }
 }

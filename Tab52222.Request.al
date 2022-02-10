@@ -8,12 +8,12 @@ table 52222 Request
         field(10; "No."; Code[20])
         {
             Caption = 'No.';
-            DataClassification = EndUserIdentifiableInformation;
+            DataClassification = CustomerContent;
         }
         field(20; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            DataClassification = EndUserIdentifiableInformation;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(30; "Creation Date"; Date)
@@ -39,7 +39,7 @@ table 52222 Request
         {
             Caption = 'Priority';
             DataClassification = CustomerContent;
-            OptionMembers = Created,Assigned,Canceled,Posted;
+            OptionMembers = Low,High,Emergency;
         }
         field(60; "Request Category"; Enum Category)
         {
@@ -75,8 +75,8 @@ table 52222 Request
         field(80; "Customer No."; Code[20])
         {
             Caption = 'Customer No.';
-            TableRelation = Customer;
-            FieldClass = FlowField;
+            TableRelation = Customer."No.";
+            FieldClass = Normal;
             trigger OnValidate()
             begin
                 CopyFromCustomer();

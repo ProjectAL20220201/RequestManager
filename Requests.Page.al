@@ -8,6 +8,7 @@ page 52221 Requests
     InsertAllowed = false;
     ModifyAllowed = false;
     DeleteAllowed = false;
+    CardPageId = "Request";
     layout
     {
         area(content)
@@ -52,6 +53,10 @@ page 52221 Requests
                     ApplicationArea = All;
                 }
                 field("Repairman Name"; Rec."Repairman Name")
+                {
+                    ApplicationArea = All;
+                }
+                field("Repairman Email"; Rec."Repairman Email")
                 {
                     ApplicationArea = All;
                 }

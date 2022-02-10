@@ -30,6 +30,7 @@ codeunit 52220 "Request Mgt"
     procedure Send(Rec: Record Request)
     begin
         IF Rec.Status = Rec.Status::Assigned THEN BEGIN
+            Rec.CalcFields("Repairman Email");
             SendMail.CreateMessage(COMPANYNAME, CompanyEmail, Rec."Repairman Email", 'Request', '', TRUE);
             SendMail.AppendBody(MessageLetterTemplate);
             SendMail.Send;

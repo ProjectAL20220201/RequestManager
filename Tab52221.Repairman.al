@@ -18,6 +18,7 @@ table 52221 Repairman
         field(30; "E-mail"; Text[80])
         {
             Caption = 'E-mail';
+            ExtendedDatatype = EMail;
             DataClassification = CustomerContent;
             //if (STRPOS("E-mail", '@') < 4) AND (STRPOS("E-mail", '.') <= 1) THEN
             //    ERROR(EmailError);
@@ -31,6 +32,7 @@ table 52221 Repairman
         field(40; "Phone No."; Text[30])
         {
             Caption = 'Phone No.';
+            ExtendedDatatype = PhoneNo;
             DataClassification = CustomerContent;
             trigger OnValidate()
             begin

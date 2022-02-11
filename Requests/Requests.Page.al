@@ -8,7 +8,7 @@ page 52221 Requests
     InsertAllowed = false;
     ModifyAllowed = false;
     DeleteAllowed = false;
-    CardPageId = "Request";
+    CardPageId = Request;
     layout
     {
         area(content)
@@ -130,11 +130,6 @@ page 52221 Requests
         StyleColorText: Text;
 
     trigger OnAfterGetRecord()
-    begin
-        CheckStatus();
-    end;
-
-    trigger OnOpenPage()
     begin
         CheckStatus();
     end;

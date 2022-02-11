@@ -1,4 +1,4 @@
-page 52222 "Request"
+page 52222 Request
 {
     Caption = 'Request';
     PageType = Document;
